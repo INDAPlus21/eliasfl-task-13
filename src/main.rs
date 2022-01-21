@@ -48,8 +48,8 @@ fn test_ray() {
 }
 
 fn main() {
-    let (width, height) = (1024, 512);
-    let scale = 4.0;
+    let (width, height) = (512, 512);
+    let scale = 2.0;
     let mut img: image::RgbImage = image::ImageBuffer::new(width, height);
     let cam = Camera::standard(scale, (height as f64 / width as f64) * scale);
 

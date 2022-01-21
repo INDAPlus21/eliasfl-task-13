@@ -15,7 +15,7 @@ impl Ray {
     }
 }
 
-pub struct Hit {
+pub struct HitRecord {
     pub t: f64,
     pub point: Point3D,
     pub normal: Point3D,
@@ -23,7 +23,7 @@ pub struct Hit {
 }
 
 pub trait Hittable {
-    fn hit(&self, ray: &Ray, t_min: f64, t_max: f64) -> Option<Hit>;
+    fn hit(&self, ray: &Ray, t_min: f64, t_max: f64) -> Option<HitRecord>;
 }
 
 #[test]
